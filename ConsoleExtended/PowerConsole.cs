@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace ConsoleExtended
 {
+    /// <summary>
+    /// Basic enumaretion of message statuses
+    /// </summary>
+    public enum MessageStatus
+    {
+        Default = 0,
+        Error = 1,
+        Warning = 2,
+        Info = 3
+    }
+
     public static partial class PowerConsole
     {
-        #region Enums
 
-        /// <summary>
-        /// Basic enumaretion of message statuses
-        /// </summary>
-        public enum MessageStatus
-        {
-            Default = 0,
-            Error = 1,
-            Warning = 2,
-            Info = 3
-        }
-
-        #endregion
 
         #region Fields
         private static ConsoleColor defaultStatusColor = ConsoleColor.Gray;
@@ -102,7 +100,8 @@ namespace ConsoleExtended
         /// <returns>Console color for the passed message status enumeration value</returns>
         private static ConsoleColor GetStatusColor(MessageStatus status)
         {
-            switch (status){
+            switch (status)
+            {
                 case MessageStatus.Default:
                     return defaultStatusColor;
                 case MessageStatus.Error:
