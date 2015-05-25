@@ -57,14 +57,14 @@ namespace ConsoleExtended
         /// <param name="timeFormat">Date and time format of the time written next to message in console output</param>
         public static void WriteLine(string message, ConsoleColor color = ConsoleColor.Gray, bool showTime = true, string timeFormat = "yyyy-MM-dd hh:mm:ss.ff")
         {
-         
+
             if (showTime)
             {
                 message = string.Format("{0} {1}", DateTime.Now.ToString(timeFormat), message);
             }
             Console.ForegroundColor = color;
             Console.WriteLine(message);
-            if (color == beepOnMessageColor)
+            if (color == beepOnMessageColor || (beepOnMessageStatus != null && GetStatusColor(beepOnMessageStatus.Value) == color))
             {
                 Console.Beep();
             }
@@ -82,8 +82,8 @@ namespace ConsoleExtended
         public static void WriteLine(string message, MessageStatus status = MessageStatus.Default, bool showTime = true, string timeFormat = "yyyy-MM-dd hh:mm:ss.ff")
         {
             ConsoleColor color = GetStatusColor(status);
-            
-            WriteLine(message,color , showTime, timeFormat);
+
+            WriteLine(message, color, showTime, timeFormat);
 
         }
         #endregion

@@ -12,11 +12,12 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            PowerConsole.BeepOnMessageColor = ConsoleColor.Red;
+            PowerConsole.BeepOnMessageStatus = PowerConsole.MessageStatus.Error;
 
-            PowerConsole.WriteLine("Test", ConsoleColor.Red);
+            PowerConsole.WriteLine("Test", ConsoleColor.Green);
             PowerConsole.ReadLine<bool>("Enter bool: ",ConsoleColor.Yellow);
 
+            
             Console.ReadLine();
         }
     }
