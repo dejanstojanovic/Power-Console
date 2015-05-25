@@ -15,9 +15,9 @@ namespace TestConsole
             PowerConsole.BeepOnMessageColor = ConsoleColor.Red;
 
             PowerConsole.WriteLine("Test", ConsoleColor.Red);
-            PowerConsole.ReadLine("Test:",ConsoleColor.Yellow);
+            PowerConsole.ReadLine<bool>("Enter bool: ",ConsoleColor.Yellow);
 
-            Console.WriteLine("");
+            Console.ReadLine();
         }
     }
 }
