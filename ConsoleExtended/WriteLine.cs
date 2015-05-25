@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleExtended
+namespace System
 {
     public static partial class PowerConsole
     {

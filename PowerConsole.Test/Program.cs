@@ -1,5 +1,4 @@
 ﻿using System;
-using ConsoleExtended;
 namespace TestConsole
 {
     class Program

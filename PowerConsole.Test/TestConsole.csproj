@@ -48,9 +48,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleExtended\ConsoleExtended.csproj">
+    <ProjectReference Include="..\ConsoleExtended\System.ConsoleExtended.csproj">
       <Project>{505ada49-c567-47c8-aa39-75dc594f815e}</Project>
-      <Name>ConsoleExtended</Name>
+      <Name>System.ConsoleExtended</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
