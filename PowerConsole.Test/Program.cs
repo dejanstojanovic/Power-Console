@@ -16,6 +16,8 @@ namespace TestConsole
 
             PowerConsole.WriteLine("Test", ConsoleColor.Red);
             PowerConsole.ReadLine("Test:",ConsoleColor.Yellow);
+
+            Console.WriteLine("");
         }
     }
 }

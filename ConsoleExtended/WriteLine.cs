@@ -14,7 +14,9 @@ namespace ConsoleExtended
         #endregion
 
         #region Properties
-        
+        /// <summary>
+        /// Status of the message which will produce beep sound when written in console
+        /// </summary>
         public static MessageStatus? BeepOnMessageStatus
         {
             get
@@ -27,7 +29,9 @@ namespace ConsoleExtended
             }
         }
 
-        
+        /// <summary>
+        /// Color of the message which will produce beep sound when written in console
+        /// </summary>
         public static ConsoleColor? BeepOnMessageColor
         {
             get
@@ -42,6 +46,15 @@ namespace ConsoleExtended
 
         #endregion
 
+        #region Methods
+        /// <summary>
+        /// Writes the specified string value, followed by the current line terminator,
+        /// to the standard output stream.
+        /// </summary>
+        /// <param name="message">Message to be written to console output</param>
+        /// <param name="color">Color of message text</param>
+        /// <param name="showTime">Show time when the message was written to console output</param>
+        /// <param name="timeFormat">Date and time format of the time written next to message in console output</param>
         public static void WriteLine(string message, ConsoleColor color = ConsoleColor.Gray, bool showTime = true, string timeFormat = "yyyy-MM-dd hh:mm:ss.ff")
         {
          
@@ -58,6 +71,14 @@ namespace ConsoleExtended
             Console.ForegroundColor = defaultStatusColor;
         }
 
+        /// <summary>
+        /// Writes the specified string value, followed by the current line terminator,
+        /// to the standard output stream.
+        /// </summary>
+        /// <param name="message">Message to be written to console output</param>
+        /// <param name="status">status of the message to be written to console output</param>
+        /// <param name="showTime">Show time when the message was written to console output</param>
+        /// <param name="timeFormat">Date and time format of the time written next to message in console output</param>
         public static void WriteLine(string message, MessageStatus status = MessageStatus.Default, bool showTime = true, string timeFormat = "yyyy-MM-dd hh:mm:ss.ff")
         {
             ConsoleColor color = GetStatusColor(status);
@@ -65,5 +86,6 @@ namespace ConsoleExtended
             WriteLine(message,color , showTime, timeFormat);
 
         }
+        #endregion
     }
 }

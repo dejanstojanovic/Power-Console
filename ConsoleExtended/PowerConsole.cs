@@ -10,6 +10,9 @@ namespace ConsoleExtended
     {
         #region Enums
 
+        /// <summary>
+        /// Basic enumaretion of message statuses
+        /// </summary>
         public enum MessageStatus
         {
             Default = 0,
@@ -28,6 +31,10 @@ namespace ConsoleExtended
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Color to be used for writting messages with default status
+        /// </summary>
         public static ConsoleColor DefaultStatusColor
         {
             get
@@ -39,6 +46,10 @@ namespace ConsoleExtended
                 defaultStatusColor = value;
             }
         }
+
+        /// <summary>
+        /// Color to be used for writting messages with error status
+        /// </summary>
         public static ConsoleColor ErrorStatusColor
         {
             get
@@ -50,6 +61,10 @@ namespace ConsoleExtended
                 errorStatusColor = value;
             }
         }
+
+        /// <summary>
+        /// Color to be used for writting messages with warning status
+        /// </summary>
         public static ConsoleColor WarningStatusColor
         {
             get
@@ -61,6 +76,10 @@ namespace ConsoleExtended
                 warningStatusColor = value;
             }
         }
+
+        /// <summary>
+        /// Color to be used for writting messages with info status
+        /// </summary>
         public static ConsoleColor InfoStatusColor
         {
             get
@@ -75,6 +94,12 @@ namespace ConsoleExtended
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Gets the color for specific message status enumeration value
+        /// </summary>
+        /// <param name="status">Status of the message</param>
+        /// <returns>Console color for the passed message status enumeration value</returns>
         private static ConsoleColor GetStatusColor(MessageStatus status)
         {
             switch (status){
