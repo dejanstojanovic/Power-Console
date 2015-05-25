@@ -82,8 +82,20 @@ namespace ConsoleExtended
         public static void WriteLine(string message, MessageStatus status = MessageStatus.Default, bool showTime = true, string timeFormat = "yyyy-MM-dd hh:mm:ss.ff")
         {
             ConsoleColor color = GetStatusColor(status);
-
             WriteLine(message, color, showTime, timeFormat);
+        }
+
+        /// <summary>
+        /// Writes the exception message text, followed by the current line terminator,
+        /// to the standard output stream.
+        /// </summary>
+        /// <param name="exception">Exception which message to display</param>
+        /// <param name="showTime">Show time when the message was written to console output</param>
+        /// <param name="timeFormat">Date and time format of the time written next to message in console output</param>
+        public static void WriteLine(Exception exception, bool showTime = true, string timeFormat = "yyyy-MM-dd hh:mm:ss.ff")
+        {
+            ConsoleColor color = GetStatusColor(MessageStatus.Error);
+            WriteLine(exception.Message, color, showTime, timeFormat);
 
         }
         #endregion

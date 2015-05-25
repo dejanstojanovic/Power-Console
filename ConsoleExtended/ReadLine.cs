@@ -58,7 +58,7 @@ namespace ConsoleExtended
                     }
                     catch (Exception ex)
                     {
-                        WriteLine(ex.Message,MessageStatus.Error,showTime,timeFormat);
+                        WriteLine(ex,showTime,timeFormat);
                         return ReadLine<T>(message,color,showTime,timeFormat);
                     }
             }
