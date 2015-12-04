@@ -1,4 +1,4 @@
-# PowerConsole
+# Power Console
 Extended console for easier use in .NET
 
 ## What is it?
